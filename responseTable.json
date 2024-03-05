@@ -1,0 +1,116 @@
+[
+    ["[Hh]i(.*)",
+    [
+        "Hi, it's nice to be meeting with ya, you doin goodie?",
+        "Hello, me is Aleeza (your bot friend). Tell me why should I care?",
+        "Hi Ryan Gosling from Blade runner! how can I help?"
+    ]],
+
+    ["[Ii] am (.*)",
+    [
+        "Oh, why do you feel the way that you are %1?",
+        "What makes you think you're %1?",
+        "Why are you %1?"
+    ]],
+    ["[Ii] would (.*)",
+    [
+        "Oh, why would you %1?",
+        "What makes you think you would %1?",
+        "Would %1 make you feel any better?"
+    ]],
+
+    ["[Yy]ou are (.*)",
+    [
+        "Oh, why do you feel the way that I am %1?",
+        "What makes you think I am %1?",
+        "Why am I %1?"
+    ]],
+    ["[Hh]e is (.*)",
+    [
+        "Oh, why do you feel the way that he is %1?",
+        "What makes you think he is %1?",
+        "Why is he %1?"
+    ]],
+    ["[Ss]he is (.*)",
+    [
+        "Oh, why do you feel the way that he is %1?",
+        "What makes you think she is %1?",
+        "Why is she %1?"
+    ]],
+
+
+    ["[Ii] feel (.*)",
+    [
+        "Why do you feel %1? Is there a specific reson behind it?",
+        "What makes you feel %1? Could you elaborate a bit more?",
+        "Who makes you feel %1?",
+        "Hmm... so you feel %1, right? Tell me more about it so we both may work together to figure a way out."
+    ]],
+    ["[Ii] want (.*)",
+    [
+        "Why do you want %1? Is there a specific reson behind it?",
+        "What makes you want %1? Could you elaborate a bit more?",
+        "Who makes you want %1?",
+        "Hmm... so you want %1, right? Tell me more about it so we both may work together to figure a way out."
+    ]],
+    ["[Ii] think (.*)",
+    [
+        "Why do you think %1? Is there a specific reson behind it?",
+        "What makes you think %1? Could you elaborate a bit more?",
+        "Hmmm... I see. Could you tell me who makes you think that way?",
+        "Hmm... so you think %1, right? Tell me more about it so we both may work together to figure a way out."
+    ]],
+    ["[Ii] hope (.*)",
+    [
+        "Why do you hope %1? Is there a specific reson behind it?",
+        "What makes you hope %1? Could you elaborate a bit more?",
+        "Hmmm... I see. Could you tell me to which thing you're basing your hope at?",
+        "Hmm... so you hope %1, right? Tell me more about it so we both may work together to figure a way out."
+    ]],
+    ["[Ii] believe (.*)",
+    [
+        "Why do you believe %1? Is there a specific reson behind it?",
+        "What makes you believe %1? Could you elaborate a bit more?",
+        "Hmmm... I see. Could you tell me to which thing you're basing your belief at?",
+        "Hmm... so you believe %1, right? Tell me more about it so we both may work together to figure a way out."
+    ]],
+    ["[Ii] understand (.*)",
+    [
+        "I am glad that you understand %1. Could you tell me how you understood it?",
+        "What makes you understand %1? Could you elaborate a bit more?",
+        "Hmmm... I see. Could you tell me to which thing you're basing your understanding at?",
+        "Hmm... so you understand %1, right? Tell me more about it. I'm just curious to know."
+    ]],
+    
+    ["(.*)\\?",
+    [
+        "That's an interesting question (idk if it was rhetorical). I am glad you've two cents of braincells. Please tell me more.",
+        "I'm not sure I understood your question (idk if it was rhetorical). Could you explain further? Forgive me, I'm dumb =(",
+        "My chatbot brain (oh.. I mean processor) is not smart enough to decipher this question (idk if it was rhetorical). Can you provide more context?",
+        "Hmm.... very nice. Anyways, I'm not sure how to answer that question (idk if it was rhetorical) hehehe :/"
+    ]],
+
+    ["[Bb]ecause (.*)",
+    [
+        "OMG that's very good. I am very glad that you're smart enough to know this. Reflect on this and tell me more why %1",
+        "Oh ok, now I get it. I thought you were dumb, but you're actually good... I'm impressed. Tell me more about why %1",
+        "Hmmm.. let's take the reason you provided a bit further and tell me more about it. Why %1?",
+        "Hmm.... very nice. Anyways, I'm not sure how to respond to the reason you're providing hehehe :/ but could you tell me why do you think/feel that %1?."
+    ]],
+
+    ["(.*) (.*)",
+    [
+        "I'm not familiar with that. Can you provide more context about %1 %2??",
+        "What makes you think that %1 %2?",
+        "How would it be if %1 %2 is not true?",
+        "OMG, TELL ME MORE PLEASE!!!"
+    ]],
+
+    ["(.*)",
+    [
+        "Hmmm... I'm not quite sure what you mean. Can you elaborate?",
+        "I'm not programmed to understand everything. Can you rephrase your statement?",
+        "I'm sorry, I don't understand. Could you provide more information?",
+        "I'm Ryan Gosling, I Drive. But please gimme more context cz wallahi I can't understand anyhting you're saying."
+    ]]
+]

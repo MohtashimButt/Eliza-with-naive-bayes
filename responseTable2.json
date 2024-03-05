@@ -1,0 +1,48 @@
+[
+    ["[Hh]i(.*)",
+    [
+        "Hi, it's nice to be meeting with ya, you doin goodie?",
+        "Hello, me is Aleeza (your bot friend). Tell me why should I care?",
+        "Hi Ryan Gosling from Blade runner! how can I help?"
+    ]],
+
+    ["[Ii] am (.*)",
+    [
+        "Oh, why do you feel the way that you are %1?",
+        "What makes you think you're %1?",
+        "Why are you %1?"
+    ]],
+    ["[Ii] would (.*)",
+    [
+        "Oh, why would you %1?",
+        "What makes you think you would %1?",
+        "Would %1 make you feel any better?"
+    ]],
+
+    ["[Yy]ou are (.*)",
+    [
+        "Oh, why do you feel the way that I am %1?",
+        "What makes you think I am %1?",
+        "Why am I %1?"
+    ]],
+    ["[Hh]e is (.*)",
+    [
+        "Oh, why do you feel the way that he is %1?",
+        "What makes you think he is %1?",
+        "Why is he %1?"
+    ]],
+    ["[Ss]he is (.*)",
+    [
+        "Oh, why do you feel the way that he is %1?",
+        "What makes you think she is %1?",
+        "Why is she %1?"
+    ]],
+
+    ["[Bb]ecause (.*)",
+    [
+        "OMG that's a very good. I am very glad that you're smart enough to know this. Reflect on this and tell me more why %1",
+        "Oh ok, now I get it. I thought you were dumb, but you're actually good... I'm impressed. Tell me more about why %1",
+        "Hmmm.. let's take the reason you provided a bit further and tell me more about it. Why %1?",
+        "Hmm.... very nice. Anyways, I'm not sure how to respond to the reason you're providing hehehe :/ but could you tell me why do you think/feel that %1?."
+    ]]
+]
