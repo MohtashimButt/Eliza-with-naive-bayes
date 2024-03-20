@@ -97,8 +97,8 @@ import json
 import re
 import random
 
-from google.colab import drive
-drive.mount('/content/drive')
+# from google.colab import drive
+# drive.mount('/content/drive')
 
 """## Tables
 
@@ -174,7 +174,7 @@ Once again, an example entry has been provided.
 
 # Add entries in the JSON file
 
-responseTable = json.load(open(fr'/content/drive/MyDrive/GEN-AI/PA2/responseTable.json'))
+responseTable = json.load(open(fr'responseTable.json'))
 
 """## Helper Functions (Optional)
 
@@ -252,25 +252,25 @@ print(therapist.respond(s))
 You can use this interface to manually check your bot's responses.
 """
 
-def command_interface():
-    print('Aleeza\n---------')
-    print('Talk to the program by typing in plain English.')
-    print('='*72)
-    print('Hello.  How are you feeling today?')
+# def command_interface():
+#     print('Aleeza\n---------')
+#     print('Talk to the program by typing in plain English.')
+#     print('='*72)
+#     print('Hello.  How are you feeling today?')
 
-    s = ''
-    therapist = Aleeza(reflectionTable, responseTable)
-    while s != 'quit':
-        try:
-            s = input('> ')
-        except EOFError:
-            s = 'quit'
-        print(s)
-        while s[-1] in '!.':
-            s = s[:-1]
-        print(therapist.respond(s))
+#     s = ''
+#     therapist = Aleeza(reflectionTable, responseTable)
+#     while s != 'quit':
+#         try:
+#             s = input('> ')
+#         except EOFError:
+#             s = 'quit'
+#         print(s)
+#         while s[-1] in '!.':
+#             s = s[:-1]
+#         print(therapist.respond(s))
 
-command_interface()
+# command_interface()
 
 """## Test Sentences
 
@@ -331,10 +331,10 @@ The model we will use is a simple Naive Bayes Classifier. This is a simple model
 These are the ONLY imports you can use for this part of the assignment.
 """
 
-!pip install --upgrade pyarrow
-!pip install datasets
+# !pip install --upgrade pyarrow
+# !pip install datasets
 
-import datasets
+# import datasets
 import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -353,19 +353,19 @@ Next, split the dataset into training and testings sets.\
 Load the emotion dataset from Hugging Face
 """
 
-dataset = datasets.load_dataset("emotion") # Code here
+# dataset = datasets.load_dataset("emotion") # Code here
 
-dataset
+# dataset
 
 """
 Split the dataset into training and testing sets
 """
 
 # Code below
-train_data = dataset["train"]["text"]
-train_labels = dataset["train"]["label"]
-test_data = dataset["test"]["text"]
-test_labels = dataset["test"]["label"]
+# train_data = dataset["train"]["text"]
+# train_labels = dataset["train"]["label"]
+# test_data = dataset["test"]["text"]
+# test_labels = dataset["test"]["label"]
 
 """## Training the Model
 
@@ -377,19 +377,19 @@ Vectorise the data and train the model
 """
 
 # Code here
-model = make_pipeline(CountVectorizer(), MultinomialNB())
-model.fit(train_data, train_labels)
+# model = make_pipeline(CountVectorizer(), MultinomialNB())
+# model.fit(train_data, train_labels)
 
 """
 Predict on the test set
 """
-predicted_labels = model.predict(test_data) # Code here
+# predicted_labels = model.predict(test_data) # Code here
 
 
 """
 Print classification report
 """
-print(classification_report(test_labels, predicted_labels))
+# print(classification_report(test_labels, predicted_labels))
 
 """## Putting it all together
 
@@ -406,7 +406,7 @@ Remove these and save your response table as "responseTable2.json".
 
 # Make a new file "responseTable2.json" and add your modified table to it
 
-responseTable = json.load(open(fr'/content/drive/MyDrive/GEN-AI/PA2/responseTable2.json'))
+responseTable = json.load(open(fr'responseTable2.json'))
 
 """#### Emotion Response Table
 
@@ -512,23 +512,23 @@ Get 5 random test instances from the test data
 """
 
 # Code here
-print("test_data",test_data)
-test_instances = random.sample(test_data, 5)
+# print("test_data",test_data)
+# test_instances = random.sample(test_data, 5)
 
 
 """
 Get responses from the intelligent_therapist
 """
 
-responses = get_responses(test_instances, intelligent_therapist)
+# responses = get_responses(test_instances, intelligent_therapist)
 
 
 """
 Print the test instances and the responses
 """
-for pair in zip(test_instances, responses):
-    print('='*72)
-    print(pair[0])
-    print(pair[1])
+# for pair in zip(test_instances, responses):
+#     print('='*72)
+#     print(pair[0])
+#     print(pair[1])
 
 """# Fin."""

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        .chat-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            max-width: 500px;
+        }
+        .user-message {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            text-align: right;
+        }
+        .bot-message {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shimmy Chatbot</h1>
+    <div class="chat-container" id="chat-container">
+        <div class="bot-message">Hello! How can I help you today?</div>
+    </div>
+    <textarea id="user-input" placeholder="Type your message here..." style="width: 100%;"></textarea>
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            var userMessage = document.getElementById('user-input').value;
+            addMessage('user', userMessage);
+
+            fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ 'user_input': userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                addMessage('bot', data.response);
+            });
+
+            document.getElementById('user-input').value = '';
+        }
+
+        function addMessage(sender, message) {
+            var container = document.getElementById('chat-container');
+            var messageElement = document.createElement('div');
+            messageElement.className = sender + '-message';
+            messageElement.innerText = message;
+            container.appendChild(messageElement);
+            container.scrollTop = container.scrollHeight;
+        }
+    </script>
+</body>
+</html>
